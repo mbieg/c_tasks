@@ -14,6 +14,6 @@
 extern int Timer;
 
 int TimerRun(int * const timer);
-void TimerReset(int * const timer);
+void TimerReset(int * const timer, int value);
 
 #endif /* !TIMER_H_ */

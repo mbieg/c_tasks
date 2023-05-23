@@ -13,7 +13,7 @@ int TimerRun(int * const timer)
     }
 
 }
-void TimerReset(int * const timer)
+void TimerReset(int * const timer, int value)
 {
-    *timer = 10;
+    *timer = value;
 }

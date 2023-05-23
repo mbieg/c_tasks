@@ -35,7 +35,7 @@ void Wrk_Path(dev_status * const devStat)
         
         default:
             InitLvl_set(&DevStatus);
-            TimerReset(&Timer);
+            TimerReset(&Timer, 20);
             break;
         }
     }
