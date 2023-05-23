@@ -1,5 +1,8 @@
 #include "work_path.h"
 #include "work_lvl.h"
+#include "timer.h"
+
+int Timer;
 
 void Wrk_Path(dev_status * const devStat)
 {
@@ -21,7 +24,7 @@ void Wrk_Path(dev_status * const devStat)
             }
             break;
         case PCHRG:
-            if (currentTmp < 2) //&& timer
+            if (currentTmp < 2 && TimerRun(&Timer) == 0) //&& timer
             {
                 devStat->Lvl = RUN;
             }
@@ -32,6 +35,7 @@ void Wrk_Path(dev_status * const devStat)
         
         default:
             InitLvl_set(&DevStatus);
+            TimerReset(&Timer);
             break;
         }
     }

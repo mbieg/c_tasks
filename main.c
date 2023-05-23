@@ -6,10 +6,11 @@
 #include "dev_status.h"
 #include "work_path.h"
 #include "var_t.h"
-
+#include "timer.h"
 
 int Current = 0;
-int Voltage = 0; 
+int Voltage = 0;
+ 
 dev_status DevStatus;
 
 void delay(int number_of_seconds)
